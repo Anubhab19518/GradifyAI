@@ -9,7 +9,9 @@ from dotenv import load_dotenv
 def configure_genai():
     """Configure Gemini API."""
     load_dotenv()
-    api_key = os.getenv("GEMINI_API_KEY") or "AIzaSyDY_9zH5gAV1uLZJ_4VHc60skQIUdPAmWk"
+    api_key = os.getenv("GEMINI_API_KEY")
+    if not api_key:
+        raise ValueError("GEMINI_API_KEY environment variable not set")
     genai.configure(api_key=api_key, transport="rest")
 
 def generate_keywords_with_weightage(question, model_answer, marks):

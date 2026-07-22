@@ -34,7 +34,7 @@ const ProfileDetails = () => {
   const fetchPapers = async () => {
     if (!userEmail) return;
     try {
-      const response = await axios.post('http://localhost:5000/api/evaluation/get-papers', {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/evaluation/get-papers`, {
         createdBy: userEmail
       }, {
         headers: { "Content-Type": "application/json" }
@@ -71,7 +71,7 @@ const ProfileDetails = () => {
     formData.append("email", userEmail);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/teacher/update-profile-picture', formData, {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/teacher/update-profile-picture`, formData, {
         headers: { "Content-Type": "multipart/form-data" }
       });
 
@@ -91,7 +91,7 @@ const ProfileDetails = () => {
     if (!userEmail) return;
 
     try {
-      const response = await axios.post('http://localhost:5000/api/teacher/update-profile', {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/teacher/update-profile`, {
         email: userEmail,
         name: editName,
         username: editUsername

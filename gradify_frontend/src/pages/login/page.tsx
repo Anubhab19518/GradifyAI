@@ -57,7 +57,7 @@ const AuthForm = () => {
           signupFormData.append('profilePicture', formData.profilePicture);
         }
 
-        const response = await fetch('http://localhost:5000/api/teacher/register', {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/teacher/register`, {
           method: 'POST',
           body: signupFormData,
         });
@@ -77,7 +77,7 @@ const AuthForm = () => {
         // Redirect to profile details page
         navigate('/profile-details');
       } else {
-        const response = await fetch('http://localhost:5000/api/teacher/login', {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/teacher/login`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

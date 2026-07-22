@@ -44,7 +44,7 @@ const QuestionForm = () => {
     setError('');
     try {
       const response = await axios.post(
-        'http://localhost:5000/api/papers/generate/model-answer',
+        `${import.meta.env.VITE_API_URL}/api/papers/generate/model-answer`,
         {
           createdBy,
           paperName,
@@ -104,7 +104,7 @@ const QuestionForm = () => {
       };
 
       await axios.post(
-        'http://localhost:5000/api/papers/store/model-answer',
+        `${import.meta.env.VITE_API_URL}/api/papers/store/model-answer`,
         payload
       );
       

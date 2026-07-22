@@ -41,7 +41,7 @@ const ExamDetails = () => {
     const fetchPaperDetails = async () => {
         try {
             setLoading(true);
-            const response = await axios.post('http://localhost:5000/api/papers/get-paper-details', {
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/papers/get-paper-details`, {
                 createdBy: localStorage.getItem("usermail"),
                 paperName: localStorage.getItem("papername")
             });

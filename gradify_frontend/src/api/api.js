@@ -3,7 +3,7 @@ import axios from "axios";
 export const CreateQuestionPaper = async (formData) => {
   try {
     const response = await axios.post(
-      "http://localhost:5000/api/papers/create/question-paper",
+      `${import.meta.env.VITE_API_URL}/api/papers/create/question-paper`,
       formData,
       {
         headers: {

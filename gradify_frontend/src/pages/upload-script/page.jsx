@@ -114,7 +114,7 @@ const EvaluateAnswer = () => {
         setProgressMsg(`Evaluating ${student.studentName || `Student #${si + 1}`}'s answers…`);
 
         const response = await axios.post(
-          "http://localhost:5000/api/evaluation/evaluate-answers",
+          `${import.meta.env.VITE_API_URL}/api/evaluation/evaluate-answers`,
           formDataToSend,
           { headers: { "Content-Type": "multipart/form-data" } }
         );

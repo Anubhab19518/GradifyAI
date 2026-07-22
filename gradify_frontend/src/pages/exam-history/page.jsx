@@ -26,7 +26,7 @@ const ExamHistory = () => {
 
   const fetchPapers = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/api/evaluation/get-papers', {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/evaluation/get-papers`, {
         createdBy: localStorage.getItem("usermail")
       }, {
         headers: {
@@ -60,7 +60,7 @@ const ExamHistory = () => {
     if (!confirmed) return;
     
     try {
-      const response = await axios.delete('http://localhost:5000/api/evaluation/delete-paper', {
+      const response = await axios.delete(`${import.meta.env.VITE_API_URL}/api/evaluation/delete-paper`, {
         data: {
           paperName: paperName,
           createdBy: localStorage.getItem("usermail")
