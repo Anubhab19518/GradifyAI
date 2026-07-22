@@ -1,0 +1,10 @@
+Add-Content -Path .gitignore -Value "venv/"
+
+venv/
+**/pycache/
+**/__pycache__/
+src/api/__pycache__/
+src/ml/__pycache__/
+src/utils/__pycache__/
+logs/
+*.log

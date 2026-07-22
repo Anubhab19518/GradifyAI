@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.dashboard-container {
+    display: flex;
+    background-color: #F8F8F8;
+}
+
+#font{
+    font-family: 'Mona Sans', sans-serif;
+}
+.profile-content {
+    padding: 20px;
+    width: 90%;
+}
+
+.profile-main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.profile-header {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.header-text {
+    max-width: 60%;
+}
+
+.header-title {
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.header-description {
+    color: #4B5563;
+    margin-top: 0.5rem;
+}
+
+.header-buttons {
+    display: flex;
+    margin-top: 1rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.role-button {
+    background-color: #F3F4F6;
+    color: #4B5563;
+    padding: 0.25rem 1rem;
+    border-radius: 9999px;
+    margin-right: 0.5rem;
+}
+
+.role-button:hover {
+    background-color: #D1FAE5;
+    color: #4B5563;
+}
+
+
+.total-papers-button {
+    background-color: #F3F4F6;
+    color: #4B5563;
+    padding: 0.25rem 1rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+}
+
+.total-papers-button:hover {
+    background-color: #D1FAE5;
+    color:#4B5563;
+}
+
+.paper-count {
+    background-color: #9333EA;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    margin-left: 0.5rem;
+}
+
+.upgrade-notice {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    color: #6B7280;
+    margin-top: 1rem;
+    gap: 5px;
+}
+
+.upgrade-icon {
+    height: 14px;
+    width: 14px;
+}
+
+.upgrade-text {
+    display: flex;
+    align-items: center;
+}
+
+.upgrade-link {
+    color: #3B82F6;
+    margin-left: 5px;
+}
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    gap: 10px;
+}
+
+.profile-image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-image {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.edit-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: white;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    border: 2px solid #fff;
+}
+.edit-icon:hover {
+    background-color: #F3F4F6;
+}
+
+.edit-icon img {
+    width: 16px;
+    height: 16px;
+}
+
+.profile-text {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.profile-username {
+    color: #6B7280;
+}
+
+.profile-navigation {
+    margin-top: 2rem;
+}
+
+.navigation-buttons {
+    display: flex;
+    border-bottom: 1px solid #E5E7EB;
+    margin-bottom: 1rem;
+}
+
+.active-tab {
+    padding: 0.5rem 1rem;
+    
+}
+.active-tab:hover {
+    background-color: #F3F4F6;
+    border-bottom: 2px solid black;
+}
+.active-tab:active {
+    background-color: #F3F4F6;
+    border-bottom: 2px solid black;
+}
+
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.grid-item {
+    background-color: #E6F2EE;
+    
+    height: 10rem;
+    border-radius: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+    .content-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+        padding-top: 60px; /* Accounts for mobile top bar */
+    }
+    .profile-content {
+        width: 100%;
+        padding: 15px;
+    }
+    .profile-header {
+        flex-direction: column-reverse; /* Put profile image on top of text */
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+    .header-text {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .header-title {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+    .header-description {
+        font-size: 0.95rem;
+    }
+    .header-buttons {
+        display: flex;
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center;
+        width: 100%;
+        gap: 12px;
+        padding: 15px 0;
+    }
+    .role-button, .total-papers-button {
+        width: 80%;
+        justify-content: center;
+        margin-right: 0;
+    }
+    .upgrade-notice {
+        text-align: center;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+    .navigation-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .active-tab {
+        flex: 1 1 auto;
+        text-align: center;
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+}

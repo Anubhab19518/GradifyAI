@@ -1,0 +1,243 @@
+.dashboard-container {
+    display: flex;
+    /* min-height: 100vh; */
+    max-width: 100%;
+    background-color: #f8f8f8;
+  }
+  
+.icon{
+    width: 19px;
+    height:19px
+}
+
+  .sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+  }
+  
+  .profile-content {
+    flex: 1;
+    margin-left: 20px; 
+    padding: 20px;
+  }
+  
+  .create-exam-container {
+    background-color: #f8f8f8;
+    padding-top: 20px;
+  }
+  
+  .create-exam-wrapper {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .create-exam-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .create-exam-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+  }
+  
+  .start-over-button {
+    background-color: black;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .refresh-icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .create-exam-description {
+    color: #4b5563;
+    margin-bottom: 2rem;
+  }
+  
+  .upload-section {
+    background-color: #FDFDFD;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+  
+  .upload-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .upload-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .upload-description {
+    color: #4b5563;
+    margin-bottom: 1rem;
+  }
+  
+  .upload-box {
+    border: 2px dashed #d1d5db;
+    padding: 1.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .upload-label {
+    cursor: pointer;
+  }
+  
+  .upload-instruction {
+    color: #4b5563;
+  }
+  
+  .uploaded-file {
+    background-color: #f3f4f6;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .file-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  #flim-icon {
+    height: 34px;
+    width: 34px;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(86, 86, 86, 0.1);
+    border-radius: 7px;
+    padding: 7.5px;
+  }
+  
+  .file-name {
+    color: #1f2937;
+  }
+  
+  .file-size {
+    color: #6b7280;
+    font-size: 0.875rem;
+  }
+  
+  .file-progress {
+    display: flex;
+    align-items: center;
+  }
+  
+  .progress-bar {
+    width: 12rem;
+    margin-right: 1rem;
+  }
+  
+  .delete-file-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .exam-details-section {
+    background-color: #FDFDFD;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .details-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .details-description {
+    color: #4b5563;
+    margin-bottom: 1rem;
+  }
+  
+  .details-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-label {
+    color: #374151;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-input {
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+  }
+  
+  .form-textarea {
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    resize: vertical;
+  }
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+        padding-top: 60px; /* Accounts for mobile top bar */
+    }
+    .profile-content {
+        margin-left: 0;
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .create-exam-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .create-exam-title {
+        font-size: 1.5rem;
+    }
+    .start-over-button {
+        width: 100%;
+        justify-content: center;
+    }
+    .form-row {
+        grid-template-columns: 1fr; /* Stack input fields vertically on mobile */
+    }
+    .upload-section, .exam-details-section {
+        padding: 1rem;
+    }
+}

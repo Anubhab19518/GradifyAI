@@ -1,0 +1,114 @@
+
+
+
+.evaluate-answer-container {
+    max-width: auto;
+    margin-top: 20px ;
+    padding-top: 1rem;
+  }
+  
+  .evaluate-answer-container h1 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .evaluate-answer-container p {
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+  }
+  
+  .evaluate-answer-container .bg-white {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  .evaluate-answer-container h2 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .evaluate-answer-container label {
+    display: block;
+    color: #374151;
+  }
+  
+  .evaluate-answer-container input {
+    width: 100%;
+    margin-top: 0.25rem;
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+  }
+  
+  .evaluate-answer-container .flex {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .evaluate-answer-container .relative {
+    position: relative;
+  }
+  
+  .evaluate-answer-container .absolute {
+    position: absolute;
+  }
+  
+  .evaluate-answer-container .bg-red-500 {
+    background-color: #ef4444;
+  }
+  
+  .evaluate-answer-container .text-white {
+    color: #ffffff;
+  }
+  
+  .evaluate-answer-container .rounded-full {
+    border-radius: 9999px;
+  }
+  
+  .evaluate-answer-container .p-1 {
+    padding: 0.25rem;
+  }
+  
+  .evaluate-answer-container .cursor-pointer {
+    cursor: pointer;
+  }
+  
+  .evaluate-answer-container .text-center {
+    text-align: center;
+  }
+  
+  .evaluate-answer-container .text-gray-500 {
+    color: #6b7280;
+  }
+  
+  .evaluate-answer-container .hidden {
+    display: none;
+  }
+  
+  .evaluate-answer-container .bg-black {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+  }
+  
+  .evaluate-answer-container .py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  .evaluate-answer-container .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .evaluate-answer-container .rounded-md {
+    border-radius: 0.375rem;
+  }

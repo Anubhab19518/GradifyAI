@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+.user-welcome-holder {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Mona Sans", serif;
+    margin-top: 15px;
+}
+
+.profile-welcome {
+    font-size: 2.6em;
+    font-weight: 500;
+    line-height: 1.1em;
+}
+
+.profile-text {
+    margin-top: 10px;
+}
+
+.profile-buttons {
+    display: flex;
+    margin-top: 16px;
+    gap: 12px;
+}
+
+.profile-buttons button{
+    background-color: #DCF0E8;
+    padding: 8px 18px;
+    border-radius: 2em;
+}
+.profile-buttons button span {
+    background-color: #C6C8F8;
+    color: #494949;
+    padding: 5px;
+    border-radius: 50%;
+    margin-left: 4px;
+}
+
+.warning {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-top: 13px;
+}
+
+.warning img {
+    width: 12px;
+    height: 12px;
+}
+
+.warning p {
+    font-size: 12px;
+    color: #828282;
+}
+
+.warning p span {
+    color: #414141;
+}
+
+.profile-image {
+    width: 38vh;
+    height: 38vh;
+    border-radius: 50%;
+    background-color: #414141;
+    position: relative;
+}
+
+.profile-image .profile-image-img {
+    width: 38vh;
+    height: 38vh;
+    border-radius: 50%;
+}
+
+.profile-image .edit-profile {
+    position: absolute;
+    bottom: 0;
+    right: 3vh;
+    z-index: 10;
+    width: 6vh;
+    height: 6vh;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-image .edit-profile img {
+    width: 4vh;
+    height: 4vh;
+}

@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Global Styles 
+* {
+    background-color: transparent;
+} */
+
+#icon{
+    height: 17px;
+    width: 17px;
+    flex-direction: column;
+}
+
+#font {
+    font-family: 'Mona Sans', sans-serif;
+}
+
+.dashboard-container {
+    display: flex;
+    background-color: transparent;
+    width: 100%;
+}
+
+.exam-history-container {
+    padding: 20px;
+    width: 100%;
+}
+
+.exam-history-wrapper {
+    width: 100%;
+    padding: 1rem;
+}
+
+/* Class Header Styles */
+.class-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.class-icon {
+    background-color: #666BF7;
+    color: white;
+    border-radius: 12px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.class-initial {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.class-info {
+    margin-left: 1rem;
+}
+
+.class-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.class-description {
+    color: #4B5563;
+    font-size: 14px;
+    margin: 0.5rem 0 0;
+}
+
+/* Action Bar Styles */
+.action-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #E5E7EB;
+    margin-bottom: 1.25rem;
+    width: 100%;
+}
+
+.list-view-button {
+    padding: 0.5rem 1rem;
+    
+}
+.list-view-button:hover {
+    background-color: #F3F4F6;
+    border-bottom: 2px solid black;
+}
+
+.list-view-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    color: #4B5563;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.create-new-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* Exam Section Styles */
+.exam-section {
+    border-radius: 8px;
+    /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); */
+    overflow: hidden;
+    width: 100%;
+}
+
+.exam-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.exam-title-section {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 78%;
+}
+
+.exam-title {
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: #111827;
+}
+
+.exam-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: auto;
+}
+
+.evaluate-new-link {
+    color: #000000;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.evaluate-new-link:hover {
+    text-decoration: underline;
+}
+
+.delete-icon {
+    cursor: pointer;
+    color: #4B5563;
+}
+
+/* Table Styles */
+.table-header{
+    display: flex;
+    gap: 6px;
+    color:#848484;
+}
+.exam-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+     background-color: transparent;
+}
+
+.student-results-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.student-results-table th,
+.student-results-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.student-results-table th:not(:last-child),
+.student-results-table td:not(:last-child) {
+    border-right: 1px solid #E5E7EB;
+}
+
+.student-results-table th {
+    color: #4B5563;
+    font-weight: 600;
+    font-size: 14px;
+    background-color: transparent;
+}
+
+.student-results-table td {
+    color: #111827;
+    font-size: 14px;
+}
+
+.student-results-table tr:last-child td {
+    border-bottom: none;
+}
+
+.student-results-table tbody tr:hover {
+    background-color: transparent;
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+        padding-top: 60px; /* Accounts for mobile top bar */
+    }
+    .profile-content {
+        margin-left: 0 !important;
+        padding: 10px !important;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .exam-history-container {
+        padding: 10px;
+    }
+    .class-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .class-info {
+        margin-left: 0;
+    }
+    .class-title {
+        font-size: 1.5rem;
+    }
+    .action-bar {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .create-new-button {
+        width: 100%;
+        justify-content: center;
+        margin-left: 0;
+    }
+    .exam-header {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto !important;
+        padding: 15px 10px;
+        gap: 15px;
+    }
+    .exam-title-section {
+        width: 100%;
+    }
+    .exam-controls {
+        margin-left: 0;
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    /* Make table fit better on mobile screens */
+    .student-results-table th,
+    .student-results-table td {
+        padding: 8px 6px;
+        font-size: 12px;
+    }
+    
+    .table-header {
+        font-size: 11px;
+        gap: 4px;
+    }
+    
+    .table-header img {
+        display: none; /* Hide icons in header to save horizontal space */
+    }
+    
+    .student-results-table {
+        min-width: max-content; /* Ensure the table can still be horizontally scrolled if absolutely necessary */
+    }
+}
