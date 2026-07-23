@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 from io import BytesIO
-from pdf2image import convert_from_bytes
+
 from src.utils.logging import get_logger
 
 logger = get_logger("image_preprocessor_logs")
@@ -22,14 +22,19 @@ class ImagePreprocessor:
             logger.info("Preprocessing file.")
 
             if file_extension.lower() == ".pdf":
-                # Convert PDF to image (first page only)
-                images = convert_from_bytes(file_content, dpi=300)
-                if not images:
+                # Convert PDF to image (first page only) using PyMuPDF
+                import fitz
+                doc = fitz.open(stream=file_content, filetype="pdf")
+                if len(doc) == 0:
                     raise ValueError("Failed to extract images from PDF.")
-                
-                # Convert PIL image to OpenCV format
-                image = np.array(images[0])
-                image = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
+                page = doc.load_page(0)
+                pix = page.get_pixmap(dpi=300)
+                image = np.frombuffer(pix.samples, dtype=np.uint8).reshape(pix.h, pix.w, pix.n)
+                if pix.n == 4:
+                    image = cv2.cvtColor(image, cv2.COLOR_RGBA2GRAY)
+                elif pix.n == 3:
+                    image = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
+                # If pix.n == 1, it's already grayscale
             else:
                 # Process regular images (JPG, PNG)
                 np_image = np.frombuffer(file_content, dtype=np.uint8)
