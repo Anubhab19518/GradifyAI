@@ -4,7 +4,7 @@ import Sidebar from "../../components/sidebar/sidebar";
 import UserProfile from "../../components/UserProfile/UserProfile";
 import "./styles.css";
 import Woman from "../../assets/niggi.webp";
-import Warn from "../../assets/Warning.png";
+import Warn from "../../assets/warning.png";
 import Edit from "../../assets/edit-icon.png";
 
 const ProfileDetails = () => {

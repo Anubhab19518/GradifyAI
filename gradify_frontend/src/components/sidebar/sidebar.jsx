@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import "./Sidebar.css";
+import "./sidebar.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaUser, FaHistory, FaPen, FaSignOutAlt, FaPlus, FaTachometerAlt, FaBars, FaTimes } from "react-icons/fa";
 import ProfileImage from '../../assets/conct.png';
