@@ -44,3 +44,4 @@ nltk
 PyPDF2
 PyMuPDF
 gunicorn
+faiss-cpu
